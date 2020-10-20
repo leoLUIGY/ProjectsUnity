@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using RPG.Saving;
 
 namespace RPG.Combat{
-public class Fighter : MonoBehaviour, IAction
+public class Fighter : MonoBehaviour, IAction, ISaveable
 {
 
     [SerializeField] float timeBetweenAttacks = 1f;
@@ -18,7 +19,9 @@ public class Fighter : MonoBehaviour, IAction
     float timeSinceLastAttack = Mathf.Infinity;
 
     private void Start(){
-        EquipWeapon(defaultWeapon);
+        if(currentWeapon == null){
+            EquipWeapon(defaultWeapon);
+        }
     }
 
  
@@ -94,5 +97,18 @@ public class Fighter : MonoBehaviour, IAction
         GetComponent<Animator>().SetTrigger("attack");
         GetComponent<Animator>().ResetTrigger("stopAttack");
     }
-}
+
+        public object CaptureState()
+        {
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            string weaponName = (string)state;
+            Weapon weapon= Resources.Load<Weapon>(weaponName);
+
+            EquipWeapon(weapon);
+        }
+    }
 }

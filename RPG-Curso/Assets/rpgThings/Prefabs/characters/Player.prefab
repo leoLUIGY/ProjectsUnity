@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: leftHandTransform
       value: 
       objectReference: {fileID: 1619546426186711085}
+    - target: {fileID: 5025422801859482791, guid: bbc9e4c90efa67bee9b232dfdac9a48e,
+        type: 3}
+      propertyPath: characterClass
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbc9e4c90efa67bee9b232dfdac9a48e, type: 3}
 --- !u!1 &7424817394602142799 stripped

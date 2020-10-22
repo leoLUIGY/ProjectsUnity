@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5158078867210153568}
   - component: {fileID: 23214434924704044}
   - component: {fileID: 4416281071835320411}
-  - component: {fileID: 7894574311907875668}
   m_Layer: 5
   m_Name: scoreExperience
   m_TagString: Untagged
@@ -61,6 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -80,18 +80,6 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!114 &7894574311907875668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375428031144925393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cddc43f47da327bc795f94c3522215c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1035488492689579916
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +140,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -337,6 +326,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -416,6 +406,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -495,6 +486,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -525,7 +517,7 @@ GameObject:
   - component: {fileID: 634014209416750972}
   - component: {fileID: 1986110163597251489}
   - component: {fileID: 3018040163928758222}
-  - component: {fileID: 5517277243448070282}
+  - component: {fileID: 821222993701398140}
   m_Layer: 5
   m_Name: scoreEnemy
   m_TagString: Untagged
@@ -575,6 +567,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -594,7 +587,7 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!114 &5517277243448070282
+--- !u!114 &821222993701398140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -603,7 +596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6739097912551091444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecc53616bcf16795682e7b95fd1adbd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 019a380472334fb5190053943fe6a3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8740674966373567898
@@ -617,7 +610,6 @@ GameObject:
   - component: {fileID: 5683938306991222328}
   - component: {fileID: 1171589054753520070}
   - component: {fileID: 8271748837070771314}
-  - component: {fileID: 7423271354569991043}
   m_Layer: 5
   m_Name: scoreLevel
   m_TagString: Untagged
@@ -667,6 +659,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -686,18 +679,6 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!114 &7423271354569991043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8740674966373567898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 077b6de22563fb0d9aa7a3be2a94dc90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9147814322238016370
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +690,7 @@ GameObject:
   - component: {fileID: 2313501842785877414}
   - component: {fileID: 4963563896032836901}
   - component: {fileID: 4842057602990505969}
-  - component: {fileID: 4856579935959076777}
+  - component: {fileID: 2682135643922505069}
   m_Layer: 5
   m_Name: score
   m_TagString: Untagged
@@ -759,6 +740,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -778,7 +760,7 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!114 &4856579935959076777
+--- !u!114 &2682135643922505069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -787,6 +769,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9147814322238016370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b99c75f78aa800f5af9aec1d998e88a, type: 3}
+  m_Script: {fileID: 11500000, guid: e360178c5ac9853629a64ee93404bf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

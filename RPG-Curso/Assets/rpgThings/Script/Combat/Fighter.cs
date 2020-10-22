@@ -4,6 +4,7 @@ using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
 using RPG.Saving;
+using RPG.Resources;
 
 namespace RPG.Combat{
 public class Fighter : MonoBehaviour, IAction, ISaveable
@@ -45,6 +46,9 @@ public class Fighter : MonoBehaviour, IAction, ISaveable
         weapon.Spawn(rightHandTransform,leftHandTransform, animator); 
     }
 
+    public Health GetTarget(){
+        return target;
+    }
 
     private void AttackBehaviour(){
         transform.LookAt(target.transform);
@@ -62,10 +66,10 @@ public class Fighter : MonoBehaviour, IAction, ISaveable
         if(target == null) return;
         if(currentWeapon.HasProjectile())
         {
-            currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+            currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject);
         } else
         {
-            target.TakeDamage(currentWeapon.GetDamage());
+            target.TakeDamage(gameObject, currentWeapon.GetDamage());
         }
         
     }
@@ -106,7 +110,7 @@ public class Fighter : MonoBehaviour, IAction, ISaveable
         public void RestoreState(object state)
         {
             string weaponName = (string)state;
-            Weapon weapon= Resources.Load<Weapon>(weaponName);
+            Weapon weapon= UnityEngine.Resources.Load<Weapon>(weaponName);
 
             EquipWeapon(weapon);
         }

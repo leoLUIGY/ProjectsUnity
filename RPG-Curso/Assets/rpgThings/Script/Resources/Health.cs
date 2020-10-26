@@ -10,7 +10,7 @@ public class Health : MonoBehaviour, ISaveable{
     bool isDead = false;
 
     private void Start(){
-        healthPoints = GetComponent<BaseStats>().GetHealth();
+        healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
     }
      
         public bool IsDead(){
@@ -29,11 +29,11 @@ public class Health : MonoBehaviour, ISaveable{
     private void AwardExperience(GameObject instigator){
         Experience experience= instigator.GetComponent<Experience>();
         if(experience == null) return;
-        experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+        experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
     }
 
     public float GetPercentage(){
-        return 100 * (healthPoints / GetComponent<BaseStats>().GetHealth());
+        return 100 * (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health));
     }
     private void Die(){
         if(isDead) return;

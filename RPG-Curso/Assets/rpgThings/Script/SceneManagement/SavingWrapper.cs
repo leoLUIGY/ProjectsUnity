@@ -26,6 +26,9 @@ public class SavingWrapper : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L)){
             Load();
         }
+        if(Input.GetKeyDown(KeyCode.Delete)){
+            Delete();
+        }
     }
 
     public void Save(){
@@ -35,6 +38,10 @@ public class SavingWrapper : MonoBehaviour
     public void Load()
     {
         GetComponent<SavingSystem>().Load(defaultSaveFile);
+    }
+
+    public void Delete() {
+        GetComponent<SavingSystem>().Delete(defaultSaveFile);
     }
 }
 }

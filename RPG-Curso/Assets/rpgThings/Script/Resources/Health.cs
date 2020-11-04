@@ -11,10 +11,20 @@ public class Health : MonoBehaviour, ISaveable{
     bool isDead = false;
 
     private void Start(){
-        GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        
         if(healthPoints < 0){
         healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
+    }
+
+    void OnEnable()
+    {
+        GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+    }
+
+    void OnDisable()
+    {
+        GetComponent<BaseStats>().onLevelUp-= RegenerateHealth;
     }
 
     private void RegenerateHealth()

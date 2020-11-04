@@ -14,10 +14,14 @@ public class Mover : MonoBehaviour, IAction, ISaveable
     NavMeshAgent navMeshAgent;
     Health health;
 
-
-    private void Start(){
+    private void Awake() {
         health = GetComponent<Health>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+    }
+
+
+    private void Start(){
+
     }
     void Update()
     {
@@ -56,9 +60,9 @@ public class Mover : MonoBehaviour, IAction, ISaveable
         public void RestoreState(object state)
         {
             SerializableVector3 position = (SerializableVector3)state;
-            GetComponent<NavMeshAgent>().enabled = false;
+            navMeshAgent.enabled = false;
             transform.position = position.ToVector();
-            GetComponent<NavMeshAgent>().enabled = true;
+            navMeshAgent.enabled = true;
             GetComponent<ActionSchedule>().CancelCurrentAction();
         
         }
